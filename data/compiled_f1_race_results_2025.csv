@@ -1,0 +1,241 @@
+position, driver               , nationality   , team        , number, time    , points, race
+       1, Lando Norris         , United Kingdom, McLaren     ,      4, 01:42:06,     25, Australian GP
+       2, Max Verstappen       , Netherlands   , Red Bull    ,      1, +0.895s ,     18, Australian GP
+       3, George Russell       , United Kingdom, Mercedes    ,     63, +8.481s ,     15, Australian GP
+       4, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +10.135s,     12, Australian GP
+       5, Alexander Albon      , Thailand      , Williams    ,     23, +12.773s,     10, Australian GP
+       6, Lance Stroll         , Canada        , Aston Martin,     18, +17.413s,      8, Australian GP
+       7, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +18.423s,      6, Australian GP
+       8, Charles Leclerc      , Monaco        , Ferrari     ,     16, +19.826s,      4, Australian GP
+       9, Oscar Piastri        , Australia     , McLaren     ,     81, +20.448s,      2, Australian GP
+      10, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +22.473s,      1, Australian GP
+      11, Pierre Gasly         , France        , Alpine      ,     10, +26.502s,      0, Australian GP
+      12, Yuki Tsunoda         , Japan         , RB          ,     22, +29.884s,      0, Australian GP
+      13, Esteban Ocon         , France        , Haas        ,     31, +33.161s,      0, Australian GP
+      14, Oliver Bearman       , United Kingdom, Haas        ,     87, +40.351s,      0, Australian GP
+      15, Liam Lawson          , New Zealand   , Red Bull    ,     30, DNF     ,      0, Australian GP
+      16, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, DNF     ,      0, Australian GP
+      17, Fernando Alonso      , Spain         , Aston Martin,     14, DNF     ,      0, Australian GP
+      18, Carlos Sainz Jr.     , Spain         , Williams    ,     55, DNF     ,      0, Australian GP
+      19, Jack Doohan          , Australia     , Alpine      ,      7, DNF     ,      0, Australian GP
+      20, Isack Hadjar         , France        , RB          ,      6, DNF     ,      0, Australian GP
+       1, Oscar Piastri        , Australia     , McLaren     ,     81, 01:30:55,     25, Shanghai GP
+       2, Lando Norris         , United Kingdom, McLaren     ,      4, +9.748s ,     18, Shanghai GP
+       3, George Russell       , United Kingdom, Mercedes    ,     63, +11.097s,     15, Shanghai GP
+       4, Max Verstappen       , Netherlands   , Red Bull    ,      1, +16.656s,     12, Shanghai GP
+       5, Charles Leclerc      , Monaco        , Ferrari     ,     16, +56 Laps,      0, Shanghai GP
+       6, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +56 Laps,      0, Shanghai GP
+       7, Esteban Ocon         , France        , Haas        ,     31, +49.969s,     10, Shanghai GP
+       8, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +53.748s,      8, Shanghai GP
+       9, Alexander Albon      , Thailand      , Williams    ,     23, +56.321s,      6, Shanghai GP
+      10, Oliver Bearman       , United Kingdom, Haas        ,     87, +61.303s,      4, Shanghai GP
+      11, Pierre Gasly         , France        , Alpine      ,     10, +56 Laps,      0, Shanghai GP
+      12, Lance Stroll         , Canada        , Aston Martin,     18, +70.204s,      2, Shanghai GP
+      13, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +76.387s,      1, Shanghai GP
+      14, Isack Hadjar         , France        , RB          ,      6, +78.875s,      0, Shanghai GP
+      15, Jack Doohan          , Australia     , Alpine      ,      7, +88.401s,      0, Shanghai GP
+      16, Liam Lawson          , New Zealand   , Red Bull    ,     30, +81.147s,      0, Shanghai GP
+      17, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +1 Lap  ,      0, Shanghai GP
+      18, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +1 Lap  ,      0, Shanghai GP
+      19, Yuki Tsunoda         , Japan         , RB          ,     22, +1 Lap  ,      0, Shanghai GP
+      20, Fernando Alonso      , Spain         , Aston Martin,     14, DNF     ,      0, Shanghai GP
+       1, Max Verstappen       , Netherlands   , Red Bull    ,      1, 01:22:07,     25, Suzuka GP
+       2, Lando Norris         , United Kingdom, McLaren     ,      4, +1.423s ,     18, Suzuka GP
+       3, Oscar Piastri        , Australia     , McLaren     ,     81, +2.129s ,     15, Suzuka GP
+       4, Charles Leclerc      , Monaco        , Ferrari     ,     16, +16.097s,     12, Suzuka GP
+       5, George Russell       , United Kingdom, Mercedes    ,     63, +17.362s,     10, Suzuka GP
+       6, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +18.671s,      8, Suzuka GP
+       7, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +29.182s,      6, Suzuka GP
+       8, Isack Hadjar         , France        , RB          ,      6, +37.134s,      4, Suzuka GP
+       9, Alexander Albon      , Thailand      , Williams    ,     23, +40.367s,      2, Suzuka GP
+      10, Oliver Bearman       , United Kingdom, Haas        ,     87, +54.529s,      1, Suzuka GP
+      11, Fernando Alonso      , Spain         , Aston Martin,     14, +57.333s,      0, Suzuka GP
+      12, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +58.401s,      0, Suzuka GP
+      13, Pierre Gasly         , France        , Alpine      ,     10, +62.122s,      0, Suzuka GP
+      14, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +74.129s,      0, Suzuka GP
+      15, Jack Doohan          , Australia     , Alpine      ,      7, +81.314s,      0, Suzuka GP
+      16, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +81.957s,      0, Suzuka GP
+      17, Liam Lawson          , New Zealand   , RB          ,     30, +82.734s,      0, Suzuka GP
+      18, Esteban Ocon         , France        , Haas        ,     31, +83.438s,      0, Suzuka GP
+      19, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +83.897s,      0, Suzuka GP
+      20, Lance Stroll         , Canada        , Aston Martin,     18, +1 Lap  ,      0, Suzuka GP
+       1, Oscar Piastri        , Australia     , McLaren     ,     81, 01:35:39,     25, Bahrain GP
+       2, George Russell       , United Kingdom, Mercedes    ,     63, +15.499s,     18, Bahrain GP
+       3, Lando Norris         , United Kingdom, McLaren     ,      4, +16.273s,     15, Bahrain GP
+       4, Charles Leclerc      , Monaco        , Ferrari     ,     16, +19.679s,     12, Bahrain GP
+       5, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +27.993s,     10, Bahrain GP
+       6, Max Verstappen       , Netherlands   , Red Bull    ,      1, +34.395s,      8, Bahrain GP
+       7, Pierre Gasly         , France        , Alpine      ,     10, +36.002s,      6, Bahrain GP
+       8, Esteban Ocon         , France        , Haas        ,     31, +44.244s,      4, Bahrain GP
+       9, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +45.061s,      2, Bahrain GP
+      10, Oliver Bearman       , United Kingdom, Haas        ,     87, +47.594s,      1, Bahrain GP
+      11, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +48.016s,      0, Bahrain GP
+      12, Alexander Albon      , Thailand      , Williams    ,     23, +48.839s,      0, Bahrain GP
+      13, Isack Hadjar         , France        , RB          ,      6, +56.314s,      0, Bahrain GP
+      14, Jack Doohan          , Australia     , Alpine      ,      7, +57.806s,      0, Bahrain GP
+      15, Fernando Alonso      , Spain         , Aston Martin,     14, +60.340s,      0, Bahrain GP
+      16, Liam Lawson          , New Zealand   , RB          ,     30, +64.435s,      0, Bahrain GP
+      17, Lance Stroll         , Canada        , Aston Martin,     18, +65.489s,      0, Bahrain GP
+      18, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +66.872s,      0, Bahrain GP
+      19, Carlos Sainz Jr.     , Spain         , Williams    ,     55, DNF     ,      0, Bahrain GP
+      20, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, DNF     ,      0, Bahrain GP
+       1, Oscar Piastri        , Australia     , McLaren     ,     81, 01:21:07,     25, Saudi Arabia GP
+       2, Max Verstappen       , Netherlands   , Red Bull    ,      1, +2.843s ,     18, Saudi Arabia GP
+       3, Charles Leclerc      , Monaco        , Ferrari     ,     16, +8.104s ,     15, Saudi Arabia GP
+       4, Lando Norris         , United Kingdom, McLaren     ,      4, +9.196s ,     12, Saudi Arabia GP
+       5, George Russell       , United Kingdom, Mercedes    ,     63, +27.236s,     10, Saudi Arabia GP
+       6, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +34.688s,      8, Saudi Arabia GP
+       7, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +39.073s,      6, Saudi Arabia GP
+       8, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +64.630s,      4, Saudi Arabia GP
+       9, Alexander Albon      , Thailand      , Williams    ,     23, +66.515s,      2, Saudi Arabia GP
+      10, Isack Hadjar         , France        , RB          ,      6, +67.091s,      1, Saudi Arabia GP
+      11, Fernando Alonso      , Spain         , Aston Martin,     14, +75.917s,      0, Saudi Arabia GP
+      12, Liam Lawson          , New Zealand   , RB          ,     30, +78.451s,      0, Saudi Arabia GP
+      13, Oliver Bearman       , United Kingdom, Haas        ,     87, +79.194s,      0, Saudi Arabia GP
+      14, Esteban Ocon         , France        , Haas        ,     31, +99.723s,      0, Saudi Arabia GP
+      15, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +1 Lap  ,      0, Saudi Arabia GP
+      16, Lance Stroll         , Canada        , Aston Martin,     18, +1 Lap  ,      0, Saudi Arabia GP
+      17, Jack Doohan          , Australia     , Alpine      ,      7, +1 Lap  ,      0, Saudi Arabia GP
+      18, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +1 Lap  ,      0, Saudi Arabia GP
+      19, Yuki Tsunoda         , Japan         , Red Bull    ,     22, DNF     ,      0, Saudi Arabia GP
+      20, Pierre Gasly         , France        , Alpine      ,     10, DNF     ,      0, Saudi Arabia GP
+       1, Oscar Piastri        , Australia     , McLaren     ,     81, 01:28:52,     25, Miami GP
+       2, Lando Norris         , United Kingdom, McLaren     ,      4, +4.630s ,     18, Miami GP
+       3, George Russell       , United Kingdom, Mercedes    ,     63, +37.644s,     15, Miami GP
+       4, Max Verstappen       , Netherlands   , Red Bull    ,      1, +39.956s,     12, Miami GP
+       5, Alexander Albon      , Thailand      , Williams    ,     23, +48.067s,     10, Miami GP
+       6, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +55.502s,      8, Miami GP
+       7, Charles Leclerc      , Monaco        , Ferrari     ,     16, +57.036s,      6, Miami GP
+       8, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +60.186s,      4, Miami GP
+       9, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +60.577s,      2, Miami GP
+      10, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +74.434s,      1, Miami GP
+      11, Isack Hadjar         , France        , RB          ,      6, +74.602s,      0, Miami GP
+      12, Esteban Ocon         , France        , Haas        ,     31, +82.006s,      0, Miami GP
+      13, Pierre Gasly         , France        , Alpine      ,     10, +90.445s,      0, Miami GP
+      14, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +1 Lap  ,      0, Miami GP
+      15, Fernando Alonso      , Spain         , Aston Martin,     14, +1 Lap  ,      0, Miami GP
+      16, Lance Stroll         , Canada        , Aston Martin,     18, +1 Lap  ,      0, Miami GP
+      17, Liam Lawson          , New Zealand   , RB          ,     30, DNF     ,      0, Miami GP
+      18, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, DNF     ,      0, Miami GP
+      19, Oliver Bearman       , United Kingdom, Haas        ,     87, DNF     ,      0, Miami GP
+      20, Jack Doohan          , Australia     , Alpine      ,      7, DNF     ,      0, Miami GP
+       1, Max Verstappen       , Netherlands   , Red Bull    ,      1, 01:31:33,     25, Emilia Romagna GP
+       2, Lando Norris         , United Kingdom, McLaren     ,      4, +6.109s ,     18, Emilia Romagna GP
+       3, Oscar Piastri        , Australia     , McLaren     ,     81, +12.956s,     15, Emilia Romagna GP
+       4, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +14.356s,     12, Emilia Romagna GP
+       5, Alexander Albon      , Thailand      , Williams    ,     23, +17.945s,     10, Emilia Romagna GP
+       6, Charles Leclerc      , Monaco        , Ferrari     ,     16, +20.774s,      8, Emilia Romagna GP
+       7, George Russell       , United Kingdom, Mercedes    ,     63, +22.034s,      6, Emilia Romagna GP
+       8, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +22.898s,      4, Emilia Romagna GP
+       9, Isack Hadjar         , France        , RB          ,      6, +23.586s,      2, Emilia Romagna GP
+      10, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +26.446s,      1, Emilia Romagna GP
+      11, Fernando Alonso      , Spain         , Aston Martin,     14, +27.250s,      0, Emilia Romagna GP
+      12, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +30.296s,      0, Emilia Romagna GP
+      13, Pierre Gasly         , France        , Alpine      ,     10, +31.424s,      0, Emilia Romagna GP
+      14, Liam Lawson          , New Zealand   , RB          ,     30, +32.511s,      0, Emilia Romagna GP
+      15, Lance Stroll         , Canada        , Aston Martin,     18, +32.993s,      0, Emilia Romagna GP
+      16, Franco Colapinto     , Argentina     , Alpine      ,     43, +33.411s,      0, Emilia Romagna GP
+      17, Oliver Bearman       , United Kingdom, Haas        ,     87, +33.808s,      0, Emilia Romagna GP
+      18, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +38.572s,      0, Emilia Romagna GP
+      19, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, DNF     ,      0, Emilia Romagna GP
+      20, Esteban Ocon         , France        , Haas        ,     31, DNF     ,      0, Emilia Romagna GP
+       1, Lando Norris         , United Kingdom, McLaren     ,      4, 01:40:33,     25, Monaco GP
+       2, Charles Leclerc      , Monaco        , Ferrari     ,     16, +3.131s ,     18, Monaco GP
+       3, Oscar Piastri        , Australia     , McLaren     ,     81, +3.658s ,     15, Monaco GP
+       4, Max Verstappen       , Netherlands   , Red Bull    ,      1, +20.572s,     12, Monaco GP
+       5, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +51.387s,     10, Monaco GP
+       6, Isack Hadjar         , France        , RB          ,      6, +1 Lap  ,      8, Monaco GP
+       7, Esteban Ocon         , France        , Haas        ,     31, +1 Lap  ,      6, Monaco GP
+       8, Liam Lawson          , New Zealand   , RB          ,     30, +1 Lap  ,      4, Monaco GP
+       9, Alexander Albon      , Thailand      , Williams    ,     23, +2 Laps ,      2, Monaco GP
+      10, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +2 Laps ,      1, Monaco GP
+      11, George Russell       , United Kingdom, Mercedes    ,     63, +2 Laps ,      0, Monaco GP
+      12, Oliver Bearman       , United Kingdom, Haas        ,     87, +2 Laps ,      0, Monaco GP
+      13, Franco Colapinto     , Argentina     , Alpine      ,     43, +2 Laps ,      0, Monaco GP
+      14, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +2 Laps ,      0, Monaco GP
+      15, Lance Stroll         , Canada        , Aston Martin,     18, +2 Laps ,      0, Monaco GP
+      16, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +2 Laps ,      0, Monaco GP
+      17, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +2 Laps ,      0, Monaco GP
+      18, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +3 Laps ,      0, Monaco GP
+      19, Fernando Alonso      , Spain         , Aston Martin,     14, DNF     ,      0, Monaco GP
+      20, Pierre Gasly         , France        , Alpine      ,     10, DNF     ,      0, Monaco GP
+       1, Oscar Piastri        , Australia     , McLaren     ,     81, 01:32:57,     25, Spanish GP
+       2, Lando Norris         , United Kingdom, McLaren     ,      4, +2.471s ,     18, Spanish GP
+       3, Charles Leclerc      , Monaco        , Ferrari     ,     16, +10.455s,     15, Spanish GP
+       4, George Russell       , United Kingdom, Mercedes    ,     63, +11.359s,     12, Spanish GP
+       5, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +13.648s,     10, Spanish GP
+       6, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +15.508s,      8, Spanish GP
+       7, Isack Hadjar         , France        , RB          ,      6, +16.022s,      6, Spanish GP
+       8, Pierre Gasly         , France        , Alpine      ,     10, +17.882s,      4, Spanish GP
+       9, Fernando Alonso      , Spain         , Aston Martin,     14, +21.564s,      2, Spanish GP
+      10, Max Verstappen       , Netherlands   , Red Bull    ,      1, +21.826s,      1, Spanish GP
+      11, Liam Lawson          , New Zealand   , RB          ,     30, +25.532s,      0, Spanish GP
+      12, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +25.996s,      0, Spanish GP
+      13, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +28.822s,      0, Spanish GP
+      14, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +29.309s,      0, Spanish GP
+      15, Franco Colapinto     , Argentina     , Alpine      ,     43, +31.381s,      0, Spanish GP
+      16, Esteban Ocon         , France        , Haas        ,     31, +32.197s,      0, Spanish GP
+      17, Oliver Bearman       , United Kingdom, Haas        ,     87, +37.065s,      0, Spanish GP
+      18, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, DNF     ,      0, Spanish GP
+      19, Alexander Albon      , Thailand      , Williams    ,     23, DNF     ,      0, Spanish GP
+      20, Lance Stroll         , Canada        , Aston Martin,     18, DNF     ,      0, Spanish GP
+       1, George Russell       , United Kingdom, Mercedes    ,     63, 01:31:52,     25, Canadian GP
+       2, Max Verstappen       , Netherlands   , Red Bull    ,      1, +0.228s ,     18, Canadian GP
+       3, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, +1.014s ,     15, Canadian GP
+       4, Oscar Piastri        , Australia     , McLaren     ,     81, +2.109s ,     12, Canadian GP
+       5, Charles Leclerc      , Monaco        , Ferrari     ,     16, +3.442s ,     10, Canadian GP
+       6, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +10.713s,      8, Canadian GP
+       7, Fernando Alonso      , Spain         , Aston Martin,     14, +10.972s,      6, Canadian GP
+       8, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +15.364s,      4, Canadian GP
+       9, Esteban Ocon         , France        , Haas        ,     31, +1 Lap  ,      2, Canadian GP
+      10, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +1 Lap  ,      1, Canadian GP
+      11, Oliver Bearman       , United Kingdom, Haas        ,     87, +1 Lap  ,      0, Canadian GP
+      12, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +1 Lap  ,      0, Canadian GP
+      13, Franco Colapinto     , Argentina     , Alpine      ,     43, +1 Lap  ,      0, Canadian GP
+      14, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +1 Lap  ,      0, Canadian GP
+      15, Pierre Gasly         , France        , Alpine      ,     10, +1 Lap  ,      0, Canadian GP
+      16, Isack Hadjar         , France        , RB          ,      6, +1 Lap  ,      0, Canadian GP
+      17, Lance Stroll         , Canada        , Aston Martin,     18, +1 Lap  ,      0, Canadian GP
+      18, Lando Norris         , United Kingdom, McLaren     ,      4, DNF     ,      0, Canadian GP
+      19, Liam Lawson          , New Zealand   , RB          ,     30, DNF     ,      0, Canadian GP
+      20, Alexander Albon      , Thailand      , Williams    ,     23, DNF     ,      0, Canadian GP
+       1, Lando Norris         , United Kingdom, McLaren     ,      4, 01:23:47,     25, Austrian GP
+       2, Oscar Piastri        , Australia     , McLaren     ,     81, +2.695s ,     18, Austrian GP
+       3, Charles Leclerc      , Monaco        , Ferrari     ,     16, +19.820s,     15, Austrian GP
+       4, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +29.020s,     12, Austrian GP
+       5, George Russell       , United Kingdom, Mercedes    ,     63, +62.396s,     10, Austrian GP
+       6, Liam Lawson          , New Zealand   , RB          ,     30, +67.754s,      8, Austrian GP
+       7, Fernando Alonso      , Spain         , Aston Martin,     14, +1 Lap  ,      6, Austrian GP
+       8, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, +1 Lap  ,      4, Austrian GP
+       9, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +1 Lap  ,      2, Austrian GP
+      10, Esteban Ocon         , France        , Haas        ,     31, +1 Lap  ,      1, Austrian GP
+      11, Oliver Bearman       , United Kingdom, Haas        ,     87, +1 Lap  ,      0, Austrian GP
+      12, Isack Hadjar         , France        , RB          ,      6, +1 Lap  ,      0, Austrian GP
+      13, Pierre Gasly         , France        , Alpine      ,     10, +1 Lap  ,      0, Austrian GP
+      14, Lance Stroll         , Canada        , Aston Martin,     18, +1 Lap  ,      0, Austrian GP
+      15, Franco Colapinto     , Argentina     , Alpine      ,     43, +1 Lap  ,      0, Austrian GP
+      16, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +2 Laps ,      0, Austrian GP
+      17, Alexander Albon      , Thailand      , Williams    ,     23, DNF     ,      0, Austrian GP
+      18, Max Verstappen       , Netherlands   , Red Bull    ,      1, DNF     ,      0, Austrian GP
+      19, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, DNF     ,      0, Austrian GP
+      20, Carlos Sainz Jr.     , Spain         , Williams    ,     55, DNF     ,      0, Austrian GP
+       1, Lando Norris         , United Kingdom, McLaren     ,      4, 01:37:15,     25, British GP
+       2, Oscar Piastri        , Australia     , McLaren     ,     81, +6.812s ,     18, British GP
+       3, Nico Hülkenberg      , Germany       , Kick Sauber ,     27, +34.742s,     15, British GP
+       4, Lewis Hamilton       , United Kingdom, Ferrari     ,     44, +39.812s,     12, British GP
+       5, Max Verstappen       , Netherlands   , Red Bull    ,      1, +56.781s,     10, British GP
+       6, Pierre Gasly         , France        , Alpine      ,     10, +59.857s,      8, British GP
+       7, Lance Stroll         , Canada        , Aston Martin,     18, +60.603s,      6, British GP
+       8, Alexander Albon      , Thailand      , Williams    ,     23, +64.135s,      4, British GP
+       9, Fernando Alonso      , Spain         , Aston Martin,     14, +65.858s,      2, British GP
+      10, George Russell       , United Kingdom, Mercedes    ,     63, +70.674s,      1, British GP
+      11, Oliver Bearman       , United Kingdom, Haas        ,     87, +72.095s,      0, British GP
+      12, Carlos Sainz Jr.     , Spain         , Williams    ,     55, +76.592s,      0, British GP
+      13, Esteban Ocon         , France        , Haas        ,     31, +77.301s,      0, British GP
+      14, Charles Leclerc      , Monaco        , Ferrari     ,     16, +84.477s,     14, British GP
+      15, Yuki Tsunoda         , Japan         , Red Bull    ,     22, +1 Lap  ,      0, British GP
+      16, Andrea Kimi Antonelli, Italy         , Mercedes    ,     12, DNF     ,      0, British GP
+      17, Isack Hadjar         , France        , RB          ,      6, DNF     ,      0, British GP
+      18, Gabriel Bortoleto    , Brazil        , Kick Sauber ,      5, DNF     ,      0, British GP
+      19, Liam Lawson          , New Zealand   , RB          ,     30, DNF     ,      0, British GP
+      20, Franco Colapinto     , Argentina     , Alpine      ,     43, DNF     ,      0, British GP

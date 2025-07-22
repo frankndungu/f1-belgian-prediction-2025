@@ -1,0 +1,22 @@
+driver,team,predicted_position,current_avg_position
+ Oscar Piastri        , McLaren     ,5.1,2.6
+ Lando Norris         , McLaren     ,5.6,3.2
+ George Russell       , Mercedes    ,6.7,4.9
+ Max Verstappen       , Red Bull    ,6.7,4.9
+ Charles Leclerc      , Ferrari     ,7.0,5.3
+ Lewis Hamilton       , Ferrari     ,7.5,6.0
+ Alexander Albon      , Williams    ,10.7,10.6
+ Andrea Kimi Antonelli, Mercedes    ,11.1,11.2
+ Nico Hülkenberg      , Kick Sauber ,11.6,11.9
+ Isack Hadjar         , RB          ,11.6,11.9
+ Esteban Ocon         , Haas        ,11.9,12.2
+ Pierre Gasly         , Alpine      ,12.0,12.5
+ Fernando Alonso      , Aston Martin,12.1,12.6
+ Carlos Sainz Jr.     , Williams    ,12.3,12.9
+ Oliver Bearman       , Haas        ,12.3,12.9
+ Yuki Tsunoda         , RB          ,12.9,13.7
+ Liam Lawson          , Red Bull    ,13.2,14.2
+ Lance Stroll         , Aston Martin,13.5,14.6
+ Franco Colapinto     , Alpine      ,14.0,15.3
+ Gabriel Bortoleto    , Kick Sauber ,14.4,15.8
+ Jack Doohan          , Alpine      ,15.0,16.7

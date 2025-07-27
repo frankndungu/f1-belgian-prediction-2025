@@ -1,0 +1,22 @@
+driver,team,qualifying_position,predicted_position,current_avg_position,position_change
+ Lando Norris         , McLaren     ,1,2.6,3.2,1.6
+ Oscar Piastri        , McLaren     ,2,3.8,2.6,1.8
+ Charles Leclerc      , Ferrari     ,3,4.2,5.3,1.2
+ Alexander Albon      , Williams    ,5,5.2,10.6,0.2
+ Max Verstappen       , Red Bull    ,4,5.3,4.9,1.3
+ Yuki Tsunoda         , RB          ,7,6.6,13.7,-0.4
+ George Russell       , Mercedes    ,6,7.3,4.9,1.3
+ Isack Hadjar         , RB          ,8,7.9,11.9,-0.1
+ Liam Lawson          , Red Bull    ,9,8.5,14.2,-0.5
+ Jack Doohan          , Alpine      ,10,9.0,16.7,-1.0
+ Gabriel Bortoleto    , Kick Sauber ,10,9.1,15.8,-0.9
+ Nico Hülkenberg      , Kick Sauber ,10,9.9,11.9,-0.1
+ Esteban Ocon         , Haas        ,11,10.9,12.2,-0.1
+ Oliver Bearman       , Haas        ,12,11.7,12.9,-0.3
+ Pierre Gasly         , Alpine      ,13,12.8,12.5,-0.2
+ Carlos Sainz Jr.     , Williams    ,15,14.7,12.9,-0.3
+ Franco Colapinto     , Alpine      ,17,16.2,15.3,-0.8
+ Lewis Hamilton       , Ferrari     ,16,17.1,6.0,1.1
+ Andrea Kimi Antonelli, Mercedes    ,18,18.1,11.2,0.1
+ Fernando Alonso      , Aston Martin,19,18.8,12.6,-0.2
+ Lance Stroll         , Aston Martin,20,19.4,14.6,-0.6

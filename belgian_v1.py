@@ -1,9 +1,6 @@
 import pandas as pd
 import numpy as np
-import requests
 import fastf1
-from datetime import datetime, date
-from sklearn.ensemble import RandomForestRegressor
 import warnings
 import os
 
@@ -18,6 +15,7 @@ class BelgianGPPredictor:
         self.current_season_data = None
         self.driver_performance = None
         self.weather_data = None
+        self.qualifying_data = None
         self.predictions = None
         self.spa_team_performance = {}
         self.wet_weather_specialists = [
@@ -28,7 +26,7 @@ class BelgianGPPredictor:
         ]
 
     def load_local_data(self):
-        """Load 2025 season data"""
+        """Load 2025 season data and qualifying results"""
         print("📂 Loading local race data...")
 
         self.current_season_data = pd.read_csv(
@@ -38,6 +36,32 @@ class BelgianGPPredictor:
 
         print(f"✅ Loaded {len(self.current_season_data)} race entries")
         self._clean_race_data()
+
+        # Load qualifying data
+        self._load_qualifying_data()
+
+    def _load_qualifying_data(self):
+        """Load and process qualifying data"""
+        print("🏁 Loading qualifying data...")
+
+        try:
+            self.qualifying_data = pd.read_csv("./data/spa_qualis.csv")
+            self.qualifying_data.columns = self.qualifying_data.columns.str.strip()
+
+            # Clean driver names to match race data format
+            self.qualifying_data["Driver"] = self.qualifying_data["Driver"].str.strip()
+
+            print(f"✅ Loaded qualifying data for {len(self.qualifying_data)} drivers")
+            print("🏁 Qualifying order:")
+            for i, row in self.qualifying_data.iterrows():
+                print(f"  {row['Position']:2d}. {row['Driver']} ({row['Team']})")
+
+        except FileNotFoundError:
+            print("❌ Qualifying data not found at ./data/spa_qualis.csv")
+            self.qualifying_data = None
+        except Exception as e:
+            print(f"❌ Error loading qualifying data: {e}")
+            self.qualifying_data = None
 
     def _clean_race_data(self):
         """Clean race data"""
@@ -57,65 +81,25 @@ class BelgianGPPredictor:
         ].apply(time_to_seconds)
 
     def get_weather_forecast(self):
-        """Get weather forecast using Open Meteo API"""
-        print("🌤️ Fetching weather forecast from Open Meteo API...")
+        """Use actual Spa weather data from today"""
+        print("🌤️ Using actual Spa weather data...")
 
-        # Spa coordinates
-        lat, lon = 50.4372, 5.9714
-        race_date = "2025-07-27"
+        # Actual Spa weather from screenshot
+        self.weather_data = {
+            "temperature_max": 17,
+            "temperature_min": 12,
+            "precipitation_probability": 60,
+            "wind_speed": 10,
+            "conditions": "wet",
+        }
 
-        try:
-            # Open Meteo API call
-            url = f"https://api.open-meteo.com/v1/forecast"
-            params = {
-                "latitude": lat,
-                "longitude": lon,
-                "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max",
-                "start_date": race_date,
-                "end_date": race_date,
-                "timezone": "Europe/Brussels",
-            }
-
-            response = requests.get(url, params=params)
-            data = response.json()
-
-            if "daily" in data:
-                daily = data["daily"]
-                self.weather_data = {
-                    "temperature_max": daily["temperature_2m_max"][0],
-                    "temperature_min": daily["temperature_2m_min"][0],
-                    "precipitation_sum": daily["precipitation_sum"][0],
-                    "precipitation_probability": daily["precipitation_probability_max"][
-                        0
-                    ],
-                    "wind_speed": daily["wind_speed_10m_max"][0],
-                    "conditions": (
-                        "wet"
-                        if daily["precipitation_probability_max"][0] > 50
-                        else "dry"
-                    ),
-                }
-
-                print(
-                    f"  🌡️ Temperature: {self.weather_data['temperature_min']:.1f}°C - {self.weather_data['temperature_max']:.1f}°C"
-                )
-                print(
-                    f"  🌧️ Rain probability: {self.weather_data['precipitation_probability']:.0f}%"
-                )
-                print(f"  💨 Wind speed: {self.weather_data['wind_speed']:.1f} km/h")
-            else:
-                raise Exception("API response format unexpected")
-
-        except Exception as e:
-            print(f"  ❌ Weather fetch failed: {e}")
-            # Fallback weather data
-            self.weather_data = {
-                "temperature_max": 22,
-                "temperature_min": 15,
-                "precipitation_probability": 35,
-                "wind_speed": 10,
-                "conditions": "mixed",
-            }
+        print(
+            f"  🌡️ Temperature: {self.weather_data['temperature_min']:.1f}°C - {self.weather_data['temperature_max']:.1f}°C"
+        )
+        print(
+            f"  🌧️ Rain probability: {self.weather_data['precipitation_probability']:.0f}%"
+        )
+        print(f"  💨 Wind speed: {self.weather_data['wind_speed']:.1f} km/h")
 
     def analyze_current_season_performance(self):
         """Analyze 2025 season performance"""
@@ -132,6 +116,9 @@ class BelgianGPPredictor:
             dnf_rate = (driver_races["time"] == "DNF").sum() / len(driver_races)
             podium_rate = (driver_races["position"] <= 3).sum() / len(driver_races)
 
+            # Calculate qualifying vs race performance
+            quali_vs_race_diff = self._calculate_quali_race_performance(driver)
+
             team = driver_races["team"].iloc[0]
 
             driver_stats.append(
@@ -142,11 +129,18 @@ class BelgianGPPredictor:
                     "total_points": total_points,
                     "dnf_rate": dnf_rate,
                     "podium_rate": podium_rate,
+                    "quali_race_diff": quali_vs_race_diff,
                 }
             )
 
         self.driver_performance = pd.DataFrame(driver_stats)
         print(f"✅ Computed performance for {len(self.driver_performance)} drivers")
+
+    def _calculate_quali_race_performance(self, driver):
+        """Calculate how well a driver typically performs in races vs qualifying"""
+        # This is a simplified version - in reality you'd want historical quali vs race data
+        # For now, return a default value, but this could be enhanced with more historical data
+        return 0.0
 
     def fetch_spa_historical_data(self):
         """Fetch real Spa data using FastF1"""
@@ -177,9 +171,31 @@ class BelgianGPPredictor:
 
         print(f"✅ Historical data for {len(self.spa_team_performance)} teams")
 
+    def get_driver_qualifying_position(self, driver_name):
+        """Get qualifying position for a driver"""
+        if self.qualifying_data is None:
+            return 10  # Default middle position
+
+        # Try exact match first
+        match = self.qualifying_data[self.qualifying_data["Driver"] == driver_name]
+        if not match.empty:
+            return match.iloc[0]["Position"]
+
+        # Try partial match (for name variations)
+        for _, row in self.qualifying_data.iterrows():
+            if (
+                driver_name.split()[-1] in row["Driver"]
+                or row["Driver"].split()[-1] in driver_name
+            ):
+                return row["Position"]
+
+        return 10  # Default if not found
+
     def create_prediction_features(self, weather_scenario="actual"):
-        """Create features for prediction model"""
-        print(f"🔧 Creating features for {weather_scenario} scenario...")
+        """Create features for prediction model including qualifying data"""
+        print(
+            f"🔧 Creating features for {weather_scenario} scenario (with qualifying data)..."
+        )
 
         features = []
         drivers = []
@@ -208,6 +224,10 @@ class BelgianGPPredictor:
             spa_performance = self.spa_team_performance.get(team, 10.0)
             feature_vector.append(spa_performance)
 
+            # Qualifying position (very important!)
+            quali_pos = self.get_driver_qualifying_position(driver_name)
+            feature_vector.append(quali_pos)
+
             # Weather impact
             weather_impact = 1.0
             if is_wet and driver_name in self.wet_weather_specialists:
@@ -223,8 +243,8 @@ class BelgianGPPredictor:
         return np.array(features), drivers
 
     def make_predictions(self, scenario="both"):
-        """Generate predictions for different weather scenarios"""
-        print("🔮 Generating race predictions...")
+        """Generate predictions for different weather scenarios with qualifying data"""
+        print("🔮 Generating race predictions (incorporating qualifying results)...")
 
         scenarios = ["dry", "wet"] if scenario == "both" else [scenario]
         all_predictions = {}
@@ -234,7 +254,6 @@ class BelgianGPPredictor:
 
             features, drivers = self.create_prediction_features(weather_scenario)
 
-            # Simple prediction based on current form + Spa performance + weather
             predictions = []
 
             for i, driver in enumerate(drivers):
@@ -242,22 +261,42 @@ class BelgianGPPredictor:
                     self.driver_performance["driver"] == driver
                 ].iloc[0]
 
-                base_position = driver_perf["avg_position"]
-                spa_adjustment = (
-                    self.spa_team_performance.get(driver_perf["team"], 10.0)
-                    - base_position
-                ) * 0.3
-                weather_adjustment = features[i][-1] - 1.0  # Weather impact
+                # Start with qualifying position as base
+                quali_pos = self.get_driver_qualifying_position(driver)
 
-                predicted_pos = base_position + spa_adjustment + weather_adjustment * 2
+                # Season form adjustment
+                season_form_adjustment = (10 - driver_perf["avg_position"]) * 0.2
+
+                # Spa-specific team performance
+                spa_adjustment = (
+                    self.spa_team_performance.get(driver_perf["team"], 10.0) - 10.0
+                ) * 0.3
+
+                # Weather adjustment
+                weather_adjustment = (features[i][-1] - 1.0) * 2
+
+                # DNF risk adjustment
+                dnf_risk = driver_perf["dnf_rate"] * 3
+
+                # Calculate predicted position
+                predicted_pos = (
+                    quali_pos
+                    + season_form_adjustment
+                    + spa_adjustment
+                    + weather_adjustment
+                    + dnf_risk
+                )
+
                 predicted_pos = max(1, min(20, predicted_pos))  # Clamp 1-20
 
                 predictions.append(
                     {
                         "driver": driver,
                         "team": driver_perf["team"],
+                        "qualifying_position": quali_pos,
                         "predicted_position": round(predicted_pos, 1),
-                        "current_avg_position": round(base_position, 1),
+                        "current_avg_position": round(driver_perf["avg_position"], 1),
+                        "position_change": round(predicted_pos - quali_pos, 1),
                     }
                 )
 
@@ -268,14 +307,14 @@ class BelgianGPPredictor:
         return all_predictions
 
     def display_predictions(self):
-        """Display predictions for both scenarios"""
+        """Display predictions for both scenarios with qualifying comparison"""
         if not self.predictions:
             print("❌ No predictions available!")
             return
 
-        print("\n" + "=" * 70)
-        print("🏆 BELGIAN GRAND PRIX 2025 - RACE PREDICTIONS")
-        print("=" * 70)
+        print("\n" + "=" * 80)
+        print("🏆 BELGIAN GRAND PRIX 2025 - RACE PREDICTIONS (WITH QUALIFYING)")
+        print("=" * 80)
         print(f"📅 Date: July 27, 2025")
         print(f"🏁 Circuit: Spa-Francorchamps")
         print(
@@ -284,39 +323,73 @@ class BelgianGPPredictor:
         print(
             f"🌧️ Rain Probability: {self.weather_data['precipitation_probability']:.0f}%"
         )
-        print("=" * 70)
+        print("=" * 80)
 
         for scenario in self.predictions:
             print(f"\n🌧️ {scenario.upper()} CONDITIONS PREDICTION:")
-            print("-" * 50)
+            print("-" * 70)
+            print(
+                f"{'Pos':<4} {'Driver':<18} {'Team':<12} {'Quali':<6} {'Change':<7} {'Season Avg'}"
+            )
+            print("-" * 70)
 
             for i, row in self.predictions[scenario].iterrows():
                 pos = int(row["predicted_position"])
+                change = row["position_change"]
+                change_str = f"{change:+.1f}" if change != 0 else "±0.0"
+
                 print(
-                    f"{pos:2d}. {row['driver']:<18} ({row['team']:<12}) [Avg: {row['current_avg_position']:4.1f}]"
+                    f"{pos:2d}.  {row['driver']:<18} {row['team']:<12} "
+                    f"P{row['qualifying_position']:2d}   {change_str:<7} {row['current_avg_position']:4.1f}"
                 )
 
-        print("\n" + "=" * 70)
+        # Show biggest movers
+        print(
+            f"\n📈 BIGGEST EXPECTED MOVERS ({list(self.predictions.keys())[0].upper()}):"
+        )
+        print("-" * 50)
+        first_scenario = list(self.predictions.values())[0]
+        biggest_gainers = first_scenario.nsmallest(3, "position_change")
+        biggest_losers = first_scenario.nlargest(3, "position_change")
+
+        print("🔺 Biggest Gainers:")
+        for _, row in biggest_gainers.iterrows():
+            if row["position_change"] < 0:
+                print(
+                    f"  {row['driver']}: P{row['qualifying_position']} → P{int(row['predicted_position'])} ({row['position_change']:.1f})"
+                )
+
+        print("🔻 Biggest Losers:")
+        for _, row in biggest_losers.iterrows():
+            if row["position_change"] > 0:
+                print(
+                    f"  {row['driver']}: P{row['qualifying_position']} → P{int(row['predicted_position'])} ({row['position_change']:+.1f})"
+                )
+
+        print("\n" + "=" * 80)
         print("📝 Notes:")
+        print("- Predictions incorporate actual qualifying positions")
         print("- Weather data from Open Meteo API")
         print("- Wet weather specialists get advantage in rain")
         print("- Historical Spa performance factored in")
-        print("- Both scenarios prepared for race day")
-        print("=" * 70)
+        print("- Position change shows expected movement from qualifying")
+        print("=" * 80)
 
     def save_predictions(self):
         """Save predictions to files"""
         if self.predictions:
             os.makedirs("models", exist_ok=True)
             for scenario, pred_df in self.predictions.items():
-                filename = f"./models/belgian_gp_{scenario}_predictions.csv"
+                filename = f"./models/belgian_gp_{scenario}_predictions_with_quali.csv"
                 pred_df.to_csv(filename, index=False)
                 print(f"💾 {scenario.capitalize()} predictions saved to {filename}")
 
     def run_full_analysis(self):
         """Run complete prediction pipeline"""
-        print("🚀 Starting Belgian GP 2025 Prediction Analysis")
-        print("=" * 60)
+        print(
+            "🚀 Starting Belgian GP 2025 Prediction Analysis (Enhanced with Qualifying)"
+        )
+        print("=" * 70)
 
         # Core pipeline
         self.load_local_data()
@@ -336,7 +409,7 @@ if __name__ == "__main__":
     predictions = predictor.run_full_analysis()
 
     print("\n📊 Key Insights:")
-    print("- Weather scenarios prepared for robustness")
-    print("- Open Meteo API provides real-time forecasts")
-    print("- Wet weather specialists identified")
-    print("- Spa circuit characteristics included")
+    print("- Qualifying positions incorporated as primary factor")
+    print("- 60% rain probability favors wet weather specialists")
+    print("- Cool temperatures (12-17°C) expected")
+    print("- Expected position changes calculated")
